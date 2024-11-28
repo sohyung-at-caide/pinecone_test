@@ -98,13 +98,8 @@ combine_docs_chain = create_stuff_documents_chain(
 )
 retrieval_chain = create_retrieval_chain(retriever, combine_docs_chain)
 
-query1 = "How can I update the tone of voice?"
-answer1_without_knowledge = openai_llm.invoke(query1)
-print("Query 1:", query1)
-print("\nAnswer without knowledge:\n\n", answer1_without_knowledge.content)
-print("\n")
-
-# openai_llm.invoke("start the LLM")
+openai_llm.invoke("start the LLM")
+time.sleep(10)
 query2 = "Where I can see all my email thread?"
 
 start_time = time.time()
